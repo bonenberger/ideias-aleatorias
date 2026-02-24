@@ -36,7 +36,7 @@
 
 
 
-function carregar () {
+/*function carregar () {
     var msg = document.getElementById('msg')
     var res = document.getElementById('resultado')
     var data = new Date()
@@ -52,6 +52,47 @@ function carregar () {
     }else {
         res.innerHTML = `BOA NOITE!`
         document.body.style.background = '#412722'
+    }
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function carregar() {
+    var saudacao = document.getElementById('msg')
+    var res = document.getElementById('resultado')
+    var data = new Date()
+    //var hora = data.getHours()
+    var hora = 15
+    var imagem = document.getElementById('foto')
+    saudacao.innerHTML = `agora são ${hora} horas`
+    if (hora > 0 && hora < 12) {
+        //bom dia
+        res.innerHTML = 'bom dia'
+        document.body.style.background = 'lightblue'
+    }else if (hora >= 12 && hora <= 18) {
+        res.innerHTML = 'boa tarde'
+        document.body.style.background = 'lightyellow'
+        document.querySelector('h1').style.color = 'black'
+        imagem.src = 'foto1.jpeg'
+    }else {
+        res.innerHTML = 'boa noite'
+        document.body.style.background = 'black'
     }
 }
 
