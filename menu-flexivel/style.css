@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: lightgray;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    height: 30px;
+    background-color: #412722;
+    color: white;
+}
+
+span {
+    font-size: 1.5em;
+}
+
+.menuprincipal {
+    display: flex;
+    margin: 5px 5px;
+    padding: 10px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+ul a {
+    text-decoration: none;
+    color: white;
+    gap: 20px;
+}
+
+button {
+    cursor: pointer;
+    background-color: lightgray;
+    border-radius: 6px;
+    padding: 6px;
+}
