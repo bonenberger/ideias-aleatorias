@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="entrada">
+        <p>Nome: <input type="text" name="nome" id="nome"></p>
+        <p>idade: <input type="number" name="idade" id="idade" min="0" max="140" required></p>
+        <p>
+            convite: 
+            <select name="convite" id="convite" required>
+                <option value="" disabled selected>selecione</option>
+                <option value="sim">sim</option>
+                <option value="não">não</option>
+            </select>
+        </p>
+        <p><button onclick="verificar()">enviar</button></p>
+    </div>
+    <div id="saida">
+        
+    </div>
+    <script>
+        function verificar() {
+            let idade = Number(document.getElementById('idade').value)
+            let saida = document.getElementById('saida')        
+            let convite = document.getElementById('convite').value
+            if (idade < 0 || idade > 120 || convite == '') {
+                window.alert('digite uma idade válida ou informe se você tem convite')
+                return
+            }
+            if (idade < 18 || convite == 'não') {
+                saida.innerHTML = `entrada proibida`
+            }else {
+                saida.innerHTML = `entrada liberada`
+            }
+            
+        }
+    </script>
+</body>
+</html>

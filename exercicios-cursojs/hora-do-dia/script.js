@@ -86,10 +86,9 @@ function carregar() {
         res.innerHTML = 'bom dia'
         document.body.style.background = 'lightblue'
     }else if (hora >= 12 && hora <= 18) {
-        res.innerHTML = 'boa tarde'
+        
         document.body.style.background = 'lightyellow'
         document.querySelector('h1').style.color = 'black'
-        imagem.src = 'foto1.jpeg'
     }else {
         res.innerHTML = 'boa noite'
         document.body.style.background = 'black'

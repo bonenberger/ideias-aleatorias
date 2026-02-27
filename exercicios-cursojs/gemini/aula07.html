@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 07</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="mural">
+        <button onclick="exibirVips()">mostrar mural</button>
+    </div>
+    <script>
+        function exibirVips() {
+            let vips = [
+                {nome: 'ana', idade: 20},
+                {nome: 'beto', idade: 25}
+            ]
+            let mural = document.getElementById('mural')
+            vips.forEach(vip => {mural.innerHTML += `<p>${vip.nome}</p>`})
+            mural.style.textAlign = 'center'
+        }
+    </script>
+</body>
+</html>
