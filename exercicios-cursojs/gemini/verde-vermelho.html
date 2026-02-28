@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajuste de preços</title>
+</head>
+<body>
+    <h1>verificador de preços</h1>
+    <div id="mural">
+        <button onclick="listarPreços()">ver preços</button>
+
+    </div>
+    <script>
+        function listarPreços() {
+            let mural = document.getElementById('mural')
+            let produtos = [
+                {nome: 'abacaxi', preço: 45},
+                {nome: 'banana', preço: 105},
+                {nome: 'maça', preço: 95},
+                {nome: 'kiwi', preço: 120},
+                {nome: 'jaboticaba', preço: 70}
+            ]
+            produtos.forEach(function(produto) {
+                if (produto.preço > 100) {
+                    mural.innerHTML += `<p style="color: red">${produto.nome} - R$ ${produto.preço}</p>`
+                }else {
+                    mural.innerHTML += `<p style="color: green">${produto.nome} - R$ ${produto.preço}</p>`
+                }
+            })
+        }
+            
+    </script>
+</body>
+</html>

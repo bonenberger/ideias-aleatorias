@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 07</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 95vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="mural">
+        <button onclick="filtrar()">filtrar VIPs</button>
+    </div>
+    <script>
+        function filtrar() {
+            let mural = document.getElementById('mural')
+            let vips = [
+                {nome: 'ana', idade: 20},
+                {nome: 'beto', idade: 25},
+                {nome: 'francine', idade: 45},
+                {nome: 'rafael', idade: 45},
+                {nome: 'leticia', idade: 10},
+                {nome: 'betina', idade: 5},
+                {nome: 'pedro', idade: 3},
+                {nome: 'martin', idade: 3},
+                {nome: 'isabella', idade: 7},
+                {nome: 'eneas', idade: 69}
+            ]
+            let maiores = vips.filter(pessoa => pessoa.idade >= 18)
+            maiores.forEach(maior => mural.innerHTML += `<p>${maior.nome}</p>`)
+            //window.alert(maiores)
+            mural.style.textAlign = 'center'
+        }
+    </script>
+</body>
+</html>
