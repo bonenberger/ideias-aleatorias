@@ -41,6 +41,10 @@ ul a {
     gap: 20px;
 }
 
+ul a:hover {
+    color: rgba(151, 58, 58, 0.711);
+}
+
 button {
     cursor: pointer;
     background-color: lightgray;
