@@ -3,23 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>menu flexível</title>
+    <title>Do Zero ao GG - Blog de Tecnologia</title>
+    <!-- SEO: Otimização de Busca e Compartilhamento -->
+    <meta name="description" content="Acompanhe as últimas notícias, análises e tendências sobre tecnologia, software, inteligência artificial e hardware.">
+    <meta name="author" content="TechNews Team">
+    <meta name="robots" content="index, follow">
+    <!-- Fontes do Google: Poppins para UI/Títulos e Inter para conteúdo geral -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <span>FranCo</span>
-        <nav class="menuprincipal">
-            <ul>
-                <ui><a href="#">Cafés</a></ui>
-                <ui><a href="#">Combos</a></ui>
-                <ui><a href="#">Quem somos</a></ui>
-            </ul>
-        </nav>
-        <button>Contato</button>
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo">Do Zero ao <span>GG</span></a>
+            
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#" class="nav-link active">Início</a></li>
+                    <li><a href="#" class="nav-link">Software</a></li>
+                    <li><a href="#" class="nav-link">Hardware</a></li>
+                    <li><a href="#" class="nav-link">Inteligência Artificial</a></li>
+                    <li><a href="#" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn-search" aria-label="Buscar" title="Buscar no site">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </svg>
+                </button>
+                <div class="menu-toggle" aria-label="Menu Mobile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
     </header>
-    <aside></aside>
-    <section></section>
-    <footer></footer>
+
+    <main class="main-content">
+        <!-- SEÇÃO HERO: Focada em Semântica (article/h1) e carregar mais rápido -->
+        <section class="hero-section container" aria-label="Notícia Destaque Principal">
+            <article class="hero-article">
+                <div class="hero-image-wrapper">
+                    <!-- SEO: Sempre usar 'alt' descritivo. loading="eager" ajuda no LCP (Largest Contentful Paint) por ser a primeira imagem -->
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1200" 
+                         alt="Ilustração de Inteligência Artificial generativa interativa" 
+                         class="hero-image" 
+                         loading="eager">
+                </div>
+                
+                <div class="hero-content">
+                    <a href="#" class="category-badge">INTELIGÊNCIA ARTIFICIAL</a>
+                    
+                    <!-- Única tag H1 da página inicial para fortalecer o SEO -->
+                    <h1 class="hero-title">
+                        <a href="#">O Impacto da Nova Geração de IAs no Futuro do Trabalho em 2026</a>
+                    </h1>
+                    
+                    <p class="hero-excerpt">
+                        Descubra como os avanços recentes em modelos de linguagem e automação estão remodelando o cenário corporativo, com focos em produtividade e novos modelos de negócio.
+                    </p>
+                    
+                    <footer class="hero-meta">
+                        <span class="author">Por Redação TechNews</span>
+                        <span class="separator">&bull;</span>
+                        <!-- Semântica: usando a tag <time> combinada com datetime -->
+                        <time datetime="2026-04-11">11 Abr, 2026</time>
+                    </footer>
+                </div>
+            </article>
+        </section>
+        <!-- LAYOUT COM SIDEBAR (PARTE 4) -->
+        <div class="container main-layout-grid">
+            
+            <!-- Coluna Esquerda: Notícias Recentes (Aproveitamos a section da Parte 3 aqui) -->
+            <div class="primary-column">
+                <!-- PARTE 3: GRID DE NOTÍCIAS RECENTES -->
+                <section class="recent-news-section" aria-label="Notícias Recentes">
+                    <h2 class="section-title">Últimas Publicações</h2>
+                    
+                    <div class="news-grid">
+                        <!-- Card 1 -->
+                        <article class="news-card">
+                            <div class="card-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600" alt="Código de programação em tela escura" class="card-image" loading="lazy">
+                                <span class="card-badge">Software</span>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">
+                                    <a href="#">Novo framework promete revolucionar a criação de APIs velozes</a>
+                                </h3>
+                                <p class="card-excerpt">A comunidade open source liberou hoje uma ferramenta que reduz o código boilerplate em mais de 70%.</p>
+                                <footer class="card-meta">
+                                    <time datetime="2026-04-10">10 Abr, 2026</time>
+                                </footer>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="news-card">
+                            <div class="card-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600" alt="Processador de computador" class="card-image" loading="lazy">
+                                <span class="card-badge">Hardware</span>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">
+                                    <a href="#">Chips de 2nm entram em produção em massa na Ásia</a>
+                                </h3>
+                                <p class="card-excerpt">Avanço na litografia permite computadores com o dobro da eficiência energética da geração anterior.</p>
+                                <footer class="card-meta">
+                                    <time datetime="2026-04-09">09 Abr, 2026</time>
+                                </footer>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="news-card">
+                            <div class="card-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1614332287897-cdc485fa562d?auto=format&fit=crop&q=80&w=600" alt="Ilustração abstrata cadeado" class="card-image" loading="lazy">
+                                <span class="card-badge">Segurança</span>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">
+                                    <a href="#">Como se proteger de ataques phishings avançados em VRA</a>
+                                </h3>
+                                <p class="card-excerpt">Com a popularização da Realidade Virtual Aumentada, criminosos virtuais miram novos métodos de roubo de dados.</p>
+                                <footer class="card-meta">
+                                    <time datetime="2026-04-08">08 Abr, 2026</time>
+                                </footer>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Coluna Direita: Barra Lateral (Sidebar) -->
+            <aside class="sidebar-column" aria-label="Barra Lateral">
+                
+                <!-- Widget: Newsletter -->
+                <section class="widget newsletter-widget" aria-labelledby="news-title">
+                    <h3 id="news-title" class="widget-title">Receba as Novidades</h3>
+                    <p class="widget-desc">Participe da nossa newsletter semanal e receba em primeira mão dados sobre IA e programação.</p>
+                    <form action="#" class="newsletter-form">
+                        <!-- SEO/Acessibilidade: label oculto para os leitores de tela não se perderem -->
+                        <label for="email" class="sr-only">Seu endereço de e-mail</label>
+                        <input type="email" id="email" placeholder="Seu melhor e-mail" required>
+                        <button type="submit">Inscrever-se gratuitamente</button>
+                    </form>
+                </section>
+
+                <!-- Widget: Notícias em Alta (Trending) -->
+                <section class="widget trending-widget" aria-labelledby="trend-title">
+                    <h3 id="trend-title" class="widget-title">Em Alta</h3>
+                    <ul class="trending-list">
+                        <li>
+                            <span class="trend-number">1</span>
+                            <a href="#">O novo design mobile que está quebrando padrões na internet.</a>
+                        </li>
+                        <li>
+                            <span class="trend-number">2</span>
+                            <a href="#">Descoberta monumental eleva bateria de smartphones para outro nível.</a>
+                        </li>
+                        <li>
+                            <span class="trend-number">3</span>
+                            <a href="#">Guia Prático: Como o CSS Grid pode salvar seu layout quebrado.</a>
+                        </li>
+                    </ul>
+                </section>
+
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- PARTE 5: RODAPÉ DO SITE (FOOTER) -->
+    <!-- SEO: Footer semântico com navegação explícita e aria-labels para redes sociais -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            
+            <div class="footer-brand">
+                <a href="#" class="logo">Tech<span>News</span></a>
+                <p class="footer-desc">A sua principal fonte de atualizações e análises sobre tecnologia, I.A e desenvolvimento Web. Junte-se à nossa gigantesca comunidade.</p>
+            </div>
+            
+            <nav class="footer-links" aria-label="Navegação secundária">
+                <h4>Categorias</h4>
+                <ul>
+                    <li><a href="#">Todas as Notícias</a></li>
+                    <li><a href="#">Análises (Reviews)</a></li>
+                    <li><a href="#">Ecossistema IA</a></li>
+                    <li><a href="#">Hardware</a></li>
+                </ul>
+            </nav>
+            
+            <nav class="footer-links" aria-label="Links Úteis">
+                <h4>Apoio & Legal</h4>
+                <ul>
+                    <li><a href="#">Sobre a Redação</a></li>
+                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+        
+        <div class="footer-bottom container">
+            <p>&copy; 2026 TechNews. Todos os direitos reservados.</p>
+            
+            <!-- Redes Sociais altamente amigáveis para leitores de tela -->
+            <div class="social-links">
+                <a href="https://www.instagram.com/dozeroaogg/" aria-label="Siga o TechNews no Instagram">Instagram</a>
+                <a href="https://www.tiktok.com/@dozeroaogg" aria-label="Siga o TechNews no TikTok">TikTok</a>
+                <a href="https://www.youtube.com/@dozeroaogg" aria-label="Inscreva-se no canal do TechNews no YouTube">YouTube</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

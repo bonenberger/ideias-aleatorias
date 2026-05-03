@@ -1,0 +1,86 @@
+/* ==============================================================
+   DZGG - CSS BASE PARA O WORDPRESS (GENERATEPRESS ou KADENCE)
+   Instruções: Copie isso e cole em:
+   Apresentação > Personalizar > CSS Adicional no seu painel WP
+============================================================== */
+
+:root {
+    --dzgg-bg: #f8fafc;
+    --dzgg-text: #0f172a;
+    --dzgg-text-light: #475569;
+    --dzgg-primary: #2563eb;
+    --dzgg-primary-hover: #1d4ed8;
+    --dzgg-border: #e2e8f0;
+}
+
+body {
+    background-color: var(--dzgg-bg);
+    color: var(--dzgg-text);
+}
+
+/* Modificando os botões padrão do WP para o visual DZGG */
+button, 
+html input[type="button"], 
+input[type="reset"], 
+input[type="submit"], 
+a.button, 
+a.button:visited, 
+.wp-block-button__link {
+    background-color: var(--dzgg-primary) !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    border: none;
+}
+
+button:hover, 
+html input[type="button"]:hover, 
+input[type="reset"]:hover, 
+input[type="submit"]:hover, 
+a.button:hover, 
+a.button:focus, 
+.wp-block-button__link:hover {
+    background-color: var(--dzgg-primary-hover) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -10px var(--dzgg-primary);
+}
+
+/* Estilização nativa para os Blocos de Citação (Quotes) do Gutenberg para parecerem caixas premium */
+.wp-block-quote {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(37, 99, 235, 0.01) 100%);
+    border-left: 4px solid var(--dzgg-primary);
+    padding: 24px;
+    border-radius: 0 16px 16px 0;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--dzgg-text-light);
+}
+
+/* Links em geral dentro do corpo do texto */
+.entry-content p a {
+    color: var(--dzgg-primary);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.entry-content p a:hover {
+    color: var(--dzgg-primary-hover);
+}
+
+/* Caixas de Prós e Contras Customizadas (Use a classe 'pros-box' e 'cons-box' no painel bloco de Grupo no WP) */
+.pros-box {
+    background-color: rgba(34, 197, 94, 0.05);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    border-radius: 12px;
+    padding: 24px;
+}
+.cons-box {
+    background-color: rgba(239, 68, 68, 0.05);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 12px;
+    padding: 24px;
+}
