@@ -1,0 +1,31 @@
+{
+    "name": "ToDo App",
+    "short_name": "ToDo",
+    "description": "Lista de tarefas simples para salvar atividades no navegador.",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#101114",
+    "theme_color": "#00ffc4",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "icons/app-icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "icons/app-icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "icons/app-icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ]
+}

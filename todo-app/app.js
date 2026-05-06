@@ -2,6 +2,12 @@ const todoForm = document.querySelector('form')
 const todoInput = document.getElementById('todo-input')
 const todoListUL = document.getElementById('todo-list')
 
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js")
+    })
+}
+
 let allTodos = getTodos()
 updateTodoList()
 

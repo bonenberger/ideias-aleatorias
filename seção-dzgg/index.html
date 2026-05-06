@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevHub - Features</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#acedff",
+                      "on-secondary": "#003640",
+                      "on-surface": "#dae2fd",
+                      "on-primary-container": "#eeefff",
+                      "secondary-container": "#03b5d3",
+                      "on-tertiary-fixed-variant": "#85145a",
+                      "on-tertiary-container": "#ffecf1",
+                      "surface-container": "#171f33",
+                      "primary-container": "#2563eb",
+                      "surface": "#0b1326",
+                      "tertiary-fixed-dim": "#ffafd3",
+                      "on-primary-fixed": "#00174b",
+                      "on-secondary-fixed-variant": "#004e5c",
+                      "secondary-fixed-dim": "#4cd7f6",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "tertiary-fixed": "#ffd8e7",
+                      "error": "#ffb4ab",
+                      "surface-bright": "#31394d",
+                      "on-secondary-container": "#00424e",
+                      "surface-tint": "#b4c5ff",
+                      "on-error": "#690005",
+                      "inverse-on-surface": "#283044",
+                      "surface-container-lowest": "#060e20",
+                      "on-tertiary": "#620040",
+                      "error-container": "#93000a",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "on-tertiary-fixed": "#3d0026",
+                      "on-error-container": "#ffdad6",
+                      "surface-container-low": "#131b2e",
+                      "on-secondary-fixed": "#001f26",
+                      "outline": "#8d90a0",
+                      "primary-fixed": "#dbe1ff",
+                      "surface-dim": "#0b1326",
+                      "on-primary": "#002a78",
+                      "on-background": "#dae2fd",
+                      "tertiary-container": "#b74082",
+                      "surface-container-high": "#222a3d",
+                      "background": "#0b1326",
+                      "surface-variant": "#2d3449",
+                      "primary": "#b4c5ff",
+                      "tertiary": "#ffafd3",
+                      "surface-container-highest": "#2d3449",
+                      "outline-variant": "#434655",
+                      "secondary": "#4cd7f6",
+                      "inverse-primary": "#0053db",
+                      "inverse-surface": "#dae2fd",
+                      "on-surface-variant": "#c3c6d7"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-bold": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-xl": [
+                              "Space Grotesk"
+                      ],
+                      "headline-md": [
+                              "Space Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.0",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .glass-card {
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0 30px rgba(37, 99, 235, 0.15);
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(15, 23, 42, 0.6);
+        }
+        .icon-glow {
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, transparent 70%);
+        }
+        .bg-mesh {
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(37, 99, 235, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(183, 64, 130, 0.1) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col relative font-body-md bg-mesh">
+<!-- TopNavBar -->
+<nav class="bg-slate-950/80 backdrop-blur-md font-['Space_Grotesk'] text-sm tracking-wide docked full-width top-0 border-b border-white/10 fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 h-16 mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-white italic">
+            DevHub
+        </div>
+<div class="hidden md:flex gap-8">
+<a class="text-blue-500 border-b-2 border-blue-500 pb-1" href="#">Notícias</a>
+<a class="text-slate-400 hover:text-white transition-colors duration-200" href="#">Programação</a>
+<a class="text-slate-400 hover:text-white transition-colors duration-200" href="#">Café do Dev</a>
+<a class="text-slate-400 hover:text-white transition-colors duration-200" href="#">Comunidade</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-blue-600 dark:text-blue-500 hover:bg-white/5 hover:text-blue-400 rounded-lg transition-all px-4 py-2 active:scale-95 transition-transform">Entrar</button>
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-lg hover:bg-white/5 hover:text-blue-400 transition-all active:scale-95 transition-transform">Cadastrar</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+<!-- Hero/Header -->
+<div class="mb-16 text-center max-w-3xl mx-auto">
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-6">Explore o Universo Tech</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Conteúdo selecionado para desenvolvedores. Das últimas notícias a tutoriais práticos, tudo acompanhado de um bom café.</p>
+</div>
+<!-- Featured Image -->
+<div class="mb-24 rounded-xl overflow-hidden shadow-[0_0_40px_rgba(37,99,235,0.1)] border border-white/5 relative h-64 md:h-96 w-full">
+<img alt="A sleek, panoramic digital dashboard interface displaying futuristic code snippets and data visualizations. The aesthetic is deep dark mode with glowing neon blue and subtle magenta accents. The layout is clean and high-tech, resembling a sophisticated developer's environment or a sci-fi command center." class="w-full h-full object-cover opacity-80 mix-blend-screen" data-alt="A sleek, panoramic digital dashboard interface displaying futuristic code snippets and data visualizations. The aesthetic is deep dark mode with glowing neon blue and subtle magenta accents. The layout is clean and high-tech, resembling a sophisticated developer's environment or a sci-fi command center." src="https://lh3.googleusercontent.com/aida/ADBb0ujR5F3Hcsu0vH_DM37YzFGpXzdC9Tc_Wxf5MjrK-h8np6TnHsFchVBQV3WGMPz2Od31ndWZOtJeJnYbuwKLfO35jPH2KL2_Xm88jGiLMXtoWkjWT0knxhuCxoTlHouSyyVWChp2DT-abjn8OiERluaxoXQiCU6-DuayvvB2N5L5aounib2q8tnY8LnmXZjlHGhUAdvgxa4s7pDsinXJ88vMMb5c-7IemKEmnLs98yJHc4BpJXwwDcXQvbjpyyy6xzBuZCwn76sTkA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+</div>
+<!-- Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1: Notícias -->
+<div class="glass-card rounded-xl p-8 flex flex-col relative overflow-hidden group">
+<div class="absolute -right-12 -top-12 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="icon-glow w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-white/5">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="newspaper" style="font-variation-settings: 'FILL' 1;">newspaper</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Notícias</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-8">
+                    Você encontra notícias de tecnologia, IAs, reviews de produtos e receitas para um bom café enquanto programa.
+                </p>
+<button class="font-label-bold text-label-bold text-primary w-full py-3 px-4 rounded-lg border border-primary/30 hover:bg-primary/10 transition-colors mt-auto flex items-center justify-center gap-2">
+                    Leia Mais
+                    <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Card 2: Programação -->
+<div class="glass-card rounded-xl p-8 flex flex-col relative overflow-hidden group">
+<div class="absolute -right-12 -top-12 w-32 h-32 bg-secondary/5 rounded-full blur-2xl group-hover:bg-secondary/10 transition-colors"></div>
+<div class="icon-glow w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-white/5">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="code" style="font-variation-settings: 'FILL' 1;">code</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Programação</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-8">
+                    A cada semana uma nova aula de Javascript ou Vibe coding para você se destacar.
+                </p>
+<button class="font-label-bold text-label-bold text-secondary w-full py-3 px-4 rounded-lg border border-secondary/30 hover:bg-secondary/10 transition-colors mt-auto flex items-center justify-center gap-2">
+                    Leia mais
+                    <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Card 3: Café do Dev -->
+<div class="glass-card rounded-xl p-8 flex flex-col relative overflow-hidden group">
+<div class="absolute -right-12 -top-12 w-32 h-32 bg-tertiary-container/5 rounded-full blur-2xl group-hover:bg-tertiary-container/10 transition-colors"></div>
+<div class="icon-glow w-16 h-16 rounded-full flex items-center justify-center mb-6 border border-white/5">
+<span class="material-symbols-outlined text-tertiary-container text-3xl" data-icon="coffee" style="font-variation-settings: 'FILL' 1;">coffee</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Café do Dev</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-8">
+                    Receitas de cafés variados, reviews dos equipamentos recomendados e dicas para o seu dia ser mais produtivo.
+                </p>
+<button class="font-label-bold text-label-bold text-tertiary-container w-full py-3 px-4 rounded-lg border border-tertiary-container/30 hover:bg-tertiary-container/10 transition-colors mt-auto flex items-center justify-center gap-2">
+                    Leia mais
+                    <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 font-['Space_Grotesk'] text-xs uppercase tracking-widest full-width border-t border-white/5 w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center max-w-[1280px] mx-auto mt-auto">
+<div class="font-bold text-white mb-6 md:mb-0">
+            © 2024 DevHub Platform. Tech-forward architecture.
+        </div>
+<div class="flex gap-6 opacity-80 hover:opacity-100">
+<a class="text-slate-500 hover:text-blue-400 transition-colors" href="#">Termos</a>
+<a class="text-slate-500 hover:text-blue-400 transition-colors" href="#">Privacidade</a>
+<a class="text-slate-500 hover:text-blue-400 transition-colors" href="#">Contato</a>
+<a class="text-slate-500 hover:text-blue-400 transition-colors" href="#">GitHub</a>
+</div>
+</footer>
+</body></html>
